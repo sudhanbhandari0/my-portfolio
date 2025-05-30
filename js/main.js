@@ -85,7 +85,7 @@ if (contactForm) {
         const formData = new FormData(this);
         const data = Object.fromEntries(formData.entries());
         try {
-            const res = await fetch('/contact', {
+            const res = await fetch('https://my-portfolio-1-shb3.onrender.com/contact', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)

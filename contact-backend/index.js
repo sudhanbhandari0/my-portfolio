@@ -8,7 +8,11 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors());
+app.use(cors({
+  origin: ['https://sudhan.fun', 'https://www.sudhan.fun', 'http://localhost:3000', 'https://candid-mermaid-260b8b.netlify.app'],
+  methods: ['POST'],
+  credentials: true
+}));
 app.use(express.json());
 
 app.post('/contact', async (req, res) => {
