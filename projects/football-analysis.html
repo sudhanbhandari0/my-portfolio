@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Football Analysis - Project Details</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <style>
+        .project-header {
+            padding: 90px 10px 18px;
+            background: linear-gradient(135deg, #232323 0%, #363636 100%);
+            color: white;
+            text-align: center;
+            border-bottom: 1.5px solid #e8e8e8;
+        }
+        .project-header h1 {
+            font-size: 2em;
+            margin-bottom: 6px;
+            color: #1e90ff;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .project-header p {
+            font-size: 1.1em;
+            color: #f3f3f3;
+            font-weight: 400;
+        }
+        .project-hero {
+            display: flex;
+            align-items: stretch;
+            justify-content: center;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 36px auto 0 auto;
+            padding: 36px 18px 0 18px;
+            background: linear-gradient(120deg, #f7f7fa 60%, #f2f2f2 100%);
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(30,144,255,0.08);
+            position: relative;
+        }
+        .project-hero::before {
+            content: '';
+            position: absolute;
+            left: 0; top: 0; right: 0; bottom: 0;
+            border-radius: 18px;
+            background: linear-gradient(120deg, rgba(30,144,255,0.04) 0%, rgba(255,255,255,0.08) 100%);
+            z-index: 0;
+        }
+        .hero-image-col {
+            flex: 1 1 520px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 320px;
+            max-width: 600px;
+            z-index: 1;
+        }
+        .project-hero-img {
+            max-width: 95%;
+            width: 480px;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: 0 6px 32px rgba(30,144,255,0.13), 0 2px 12px rgba(0,0,0,0.08);
+            background: #fff;
+            border: 2.5px solid #eee;
+            transition: box-shadow 0.3s;
+        }
+        .project-hero-img:hover {
+            box-shadow: 0 10px 40px rgba(30,144,255,0.18), 0 4px 18px rgba(0,0,0,0.10);
+        }
+        .hero-overview-col {
+            flex: 1 1 520px;
+            padding: 0 10px;
+            min-width: 280px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            z-index: 1;
+        }
+        .hero-overview-col h2 {
+            color: #1e90ff;
+            font-size: 1.5em;
+            margin-bottom: 12px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        .hero-overview-col p {
+            font-size: 1.08em;
+            color: #232323;
+            line-height: 1.7;
+            background: rgba(255,255,255,0.85);
+            padding: 16px 18px;
+            border-radius: 10px;
+            box-shadow: 0 1.5px 6px rgba(0,0,0,0.02);
+            font-weight: 400;
+        }
+        @media (max-width: 900px) {
+            .project-hero {
+                flex-direction: column;
+                gap: 18px;
+                padding: 18px 2vw 0 2vw;
+            }
+            .hero-image-col, .hero-overview-col {
+                width: 100%;
+                padding: 0;
+                min-width: 0;
+            }
+            .project-hero-img {
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+        .project-section {
+            margin-bottom: 24px;
+        }
+        .project-section:last-of-type {
+            margin-bottom: 0;
+        }
+        .project-section h2 {
+            color: #1e90ff;
+            font-size: 1.25em;
+            margin-bottom: 12px;
+            font-weight: 600;
+            text-align: left;
+            padding-left: 0;
+        }
+        .project-section ul {
+            margin-left: 18px;
+        }
+        .project-section li {
+            margin-bottom: 8px;
+            font-size: 1em;
+        }
+        .back-button {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <a href="../index.html" class="logo-link">
+                <svg class="logo-svg" width="48" height="48" viewBox="0 0 120 120">
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#1e90ff"/>
+                            <stop offset="50%" style="stop-color:#63b3ed"/>
+                            <stop offset="100%" style="stop-color:#1e90ff"/>
+                        </linearGradient>
+                        <filter id="glow">
+                            <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                            <feMerge>
+                                <feMergeNode in="coloredBlur"/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                        <clipPath id="hexClip">
+                            <path d="M60 15L105 40V90L60 115L15 90V40L60 15Z"/>
+                        </clipPath>
+                    </defs>
+                    <g clip-path="url(#hexClip)">
+                        <path class="logo-hex" d="M60 15L105 40V90L60 115L15 90V40L60 15Z" fill="url(#logoGradient)" filter="url(#glow)"/>
+                        <path class="logo-hex-outline" d="M60 15L105 40V90L60 115L15 90V40L60 15Z" fill="none" stroke="#fff" stroke-width="2" opacity="0.3"/>
+                        <text x="60" y="75" text-anchor="middle" class="logo-text" fill="#fff" filter="url(#glow)" font-family="Inter, sans-serif" font-weight="700" font-size="36">SB</text>
+                    </g>
+                </svg>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Project Header -->
+    <header class="project-header">
+        <h1>AI-Powered Football Match Analysis with Advanced Player Tracking</h1>
+        <p>Computer vision and machine learning for next-level sports analytics</p>
+    </header>
+
+    <!-- Project Hero Section: Image + Overview -->
+    <section class="project-hero">
+        <div class="hero-image-col">
+            <img src="../images/football.png" alt="AI Football Analysis Screenshot" class="project-hero-img">
+        </div>
+        <div class="hero-overview-col">
+            <h2>Project Overview</h2>
+            <p>This project leverages advanced computer vision and machine learning techniques to perform comprehensive football match analysis from video footage. It focuses on accurately detecting and tracking players, referees, and the ball using a custom-trained YOLO model. The system further assigns players to teams based on jersey color using K-means clustering and calculates key performance metrics such as team ball possession, player speed, and distance covered, by compensating for camera movement with Optical Flow and applying Perspective Transformation for real-world measurements.</p>
+        </div>
+    </section>
+
+    <main class="project-content">
+        <section class="project-section">
+            <h2>Key Technical Achievements & Features</h2>
+            <ul>
+                <li><strong>Robust Object Detection & Tracking:</strong> Utilized a custom-trained YOLO (v5) model for high-accuracy detection of players, referees, and the football. Implemented tracking algorithms to maintain object identities across frames.</li>
+                <li><strong>Automated Team Assignment:</strong> Employed K-means clustering for pixel segmentation on player jerseys to automatically assign players to their respective teams based on dominant t-shirt colors.</li>
+                <li><strong>Camera Motion Compensation:</strong> Applied Optical Flow techniques to measure and compensate for camera movement between frames, ensuring more accurate tracking of player movements relative to the pitch.</li>
+                <li><strong>Real-World Metric Calculation:</strong> Implemented Perspective Transformation to map player positions from 2D video coordinates to a 3D real-world representation, allowing for movement measurement in meters rather than pixels.</li>
+                <li><strong>Performance Analytics:</strong> Calculated key metrics including: Team ball possession percentage. Individual player speed. Total distance covered by each player.</li>
+            </ul>
+        </section>
+        <section class="project-section">
+            <h2>Core Technologies Used</h2>
+            <ul>
+                <li><strong>Primary Language:</strong> Python 3.x</li>
+                <li><strong>Object Detection:</strong> Ultralytics (for YOLOv5)</li>
+                <li><strong>Computer Vision:</strong> OpenCV</li>
+                <li><strong>Clustering:</strong> Scikit-learn (for K-means, implied if not directly used via a library that wraps it)</li>
+                <li><strong>Numerical Computation & Data Handling:</strong> NumPy, Pandas</li>
+                <li><strong>Visualization:</strong> Matplotlib</li>
+                <li><strong>Tracking & Utilities:</strong> Supervision (library)</li>
+            </ul>
+        </section>
+        <a href="../index.html" class="back-button">Back to Portfolio</a>
+    </main>
+    <script src="../js/main.js"></script>
+</body>
+</html> 

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FishTank - Project Details</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <style>
+        .project-header {
+            padding: 90px 10px 18px;
+            background: linear-gradient(135deg, #232323 0%, #363636 100%);
+            color: white;
+            text-align: center;
+            border-bottom: 1.5px solid #e8e8e8;
+        }
+        .project-header h1 {
+            font-size: 2em;
+            margin-bottom: 6px;
+            color: #00B4D8;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .project-header p {
+            font-size: 1.1em;
+            color: #f3f3f3;
+            font-weight: 400;
+        }
+        .project-hero {
+            display: flex;
+            align-items: stretch;
+            justify-content: center;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 36px auto 0 auto;
+            padding: 36px 18px 0 18px;
+            background: linear-gradient(120deg, #f7f7fa 60%, #f2f2f2 100%);
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(0,180,216,0.08);
+            position: relative;
+        }
+        .project-hero::before {
+            content: '';
+            position: absolute;
+            left: 0; top: 0; right: 0; bottom: 0;
+            border-radius: 18px;
+            background: linear-gradient(120deg, rgba(0,180,216,0.04) 0%, rgba(255,255,255,0.08) 100%);
+            z-index: 0;
+        }
+        .hero-image-col {
+            flex: 1 1 520px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 320px;
+            max-width: 600px;
+            z-index: 1;
+        }
+        .project-hero-img {
+            max-width: 95%;
+            width: 480px;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: 0 6px 32px rgba(0,180,216,0.13), 0 2px 12px rgba(0,0,0,0.08);
+            background: #fff;
+            border: 2.5px solid #eee;
+            transition: box-shadow 0.3s;
+        }
+        .project-hero-img:hover {
+            box-shadow: 0 10px 40px rgba(0,180,216,0.18), 0 4px 18px rgba(0,0,0,0.10);
+        }
+        .hero-overview-col {
+            flex: 1 1 520px;
+            padding: 0 10px;
+            min-width: 280px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            z-index: 1;
+        }
+        .hero-overview-col h2 {
+            color: #00B4D8;
+            font-size: 1.5em;
+            margin-bottom: 12px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        .hero-overview-col p {
+            font-size: 1.08em;
+            color: #232323;
+            line-height: 1.7;
+            background: rgba(255,255,255,0.85);
+            padding: 16px 18px;
+            border-radius: 10px;
+            box-shadow: 0 1.5px 6px rgba(0,0,0,0.02);
+            font-weight: 400;
+        }
+        @media (max-width: 900px) {
+            .project-hero {
+                flex-direction: column;
+                gap: 18px;
+                padding: 18px 2vw 0 2vw;
+            }
+            .hero-image-col, .hero-overview-col {
+                width: 100%;
+                padding: 0;
+                min-width: 0;
+            }
+            .project-hero-img {
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+        .project-section {
+            margin-bottom: 24px;
+        }
+        .project-section:last-of-type {
+            margin-bottom: 0;
+        }
+        .project-section h2 {
+            color: #00B4D8;
+            font-size: 1.25em;
+            margin-bottom: 12px;
+            font-weight: 600;
+            text-align: left;
+            padding-left: 0;
+        }
+        .project-section ul {
+            margin-left: 18px;
+        }
+        .project-section li {
+            margin-bottom: 8px;
+            font-size: 1em;
+        }
+        .back-button {
+            margin-top: 30px;
+        }
+        .external-links {
+            margin: 18px 0 24px 0;
+            display: flex;
+            gap: 18px;
+        }
+        .external-links a {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #00B4D8;
+            color: #fff;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        .external-links a:hover {
+            background: #2EC4B6;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <a href="../index.html" class="logo-link">
+                <svg class="logo-svg" width="48" height="48" viewBox="0 0 120 120">
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#00B4D8"/>
+                            <stop offset="50%" style="stop-color:#2EC4B6"/>
+                            <stop offset="100%" style="stop-color:#00B4D8"/>
+                        </linearGradient>
+                        <filter id="glow">
+                            <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                            <feMerge>
+                                <feMergeNode in="coloredBlur"/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                        <clipPath id="hexClip">
+                            <path d="M60 15L105 40V90L60 115L15 90V40L60 15Z"/>
+                        </clipPath>
+                    </defs>
+                    <g clip-path="url(#hexClip)">
+                        <path class="logo-hex" d="M60 15L105 40V90L60 115L15 90V40L60 15Z" fill="url(#logoGradient)" filter="url(#glow)"/>
+                        <path class="logo-hex-outline" d="M60 15L105 40V90L60 115L15 90V40L60 15Z" fill="none" stroke="#fff" stroke-width="2" opacity="0.3"/>
+                        <text x="60" y="75" text-anchor="middle" class="logo-text" fill="#fff" filter="url(#glow)" font-family="Inter, sans-serif" font-weight="700" font-size="36">SB</text>
+                    </g>
+                </svg>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Project Header -->
+    <header class="project-header">
+        <h1>FishTank: AI-Powered Decentralized Project Funding on Solana</h1>
+        <p>Innovative platform for secure, AI-driven project funding and management</p>
+    </header>
+
+    <!-- Project Hero Section: Image + Overview -->
+    <section class="project-hero">
+        <div class="hero-image-col">
+            <img src="../images/Fishtank.png" alt="FishTank Platform Screenshot" class="project-hero-img">
+        </div>
+        <div class="hero-overview-col">
+            <h2>Project Overview</h2>
+            <p>FishTank is an innovative decentralized platform built on the Solana blockchain, designed to streamline and secure project funding. It uniquely combines AI-driven project analysis, NFT-based project representation, secure on-chain transactions, and comprehensive real-time tracking for both project creators and investors. The platform offers a robust ecosystem for managing project lifecycles, investments, and investor portfolios with a focus on security, transparency, and user experience.</p>
+        </div>
+    </section>
+
+    <main class="project-content">
+        <div class="external-links">
+            <a href="https://fishtankai.com" target="_blank"><i class="fas fa-globe"></i> Live Demo</a>
+            <a href="https://github.com/aitankfish/FishTank" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+        </div>
+        <section class="project-section">
+            <h2>Key Features</h2>
+            <ul>
+                <li><strong>AI-Powered Project Analysis:</strong> Leverages OpenAI for in-depth project analysis and risk assessment, providing valuable insights to investors.</li>
+                <li><strong>NFT-Based Project Representation:</strong> Projects are minted as NFTs with detailed metadata, stored decentrally on IPFS/NFT.Storage. On-chain ownership verification and management.</li>
+                <li><strong>Secure & Transparent Funding:</strong> Utilizes Solana blockchain for secure and auditable funding transactions. "Project Tank" feature for managing and tracking funded projects.</li>
+                <li><strong>Comprehensive Project & Investor Management:</strong> Multi-stage project lifecycle management. Real-time project status tracking and updates via WebSockets. Investor portfolio tracking with detailed metrics and transaction history.</li>
+                <li><strong>Enhanced Security & Verification:</strong> KYC verification for project owners. Secure wallet integration (Phantom). Transaction signature verification.</li>
+                <li><strong>Modern User Experience:</strong> Responsive UI built with React and Styled Components. Real-time updates and cross-device synchronization using IndexedDB caching. Comprehensive error handling and user feedback.</li>
+            </ul>
+        </section>
+        <section class="project-section">
+            <h2>Technical Highlights & Architecture</h2>
+            <ul>
+                <li><strong>Solana Blockchain Core:</strong> Custom Solana Program (FishTank Program ID: 2UAffCaPGycoxs5MJHduEhLS6B33N8rswbUwmrehHiwd on devnet) manages NFT minting, funding, and project state on-chain. Built with Anchor framework for smart contract development.</li>
+                <li><strong>Decentralized Storage:</strong> IPFS and NFT.Storage for immutable and decentralized storage of project metadata and assets.</li>
+                <li><strong>Real-time Capabilities:</strong> WebSocket integration (Socket.IO) for instant updates on project status, funding, and analytics.</li>
+                <li><strong>Efficient Data Management:</strong> MongoDB backend for off-chain data, enabling complex queries, analytics, and user management.</li>
+                <li><strong>AI Integration:</strong> OpenAI API integrated for automated project document analysis and risk assessment.</li>
+            </ul>
+        </section>
+        <section class="project-section">
+            <h2>Tech Stack</h2>
+            <ul>
+                <li><strong>Frontend:</strong> React.js 18.2, React Router DOM, Custom Hooks with Context API, Styled Components, React Icons, React Toastify, Dexie.js (IndexedDB), Socket.IO Client</li>
+                <li><strong>Blockchain Integration (Solana):</strong> @solana/web3.js, @solana/spl-token, @metaplex-foundation/js (NFTs), @solana/wallet-adapter-react (Phantom, etc.), @project-serum/anchor (Smart Contracts)</li>
+                <li><strong>Backend Services:</strong> Node.js, Express.js, MongoDB with Mongoose, Socket.IO, OpenAI API, PDF.js</li>
+                <li><strong>Storage Solutions:</strong> NFT.Storage, IPFS HTTP Client</li>
+                <li><strong>Development & Build:</strong> Craco, Babel, TypeScript, ESLint, Prettier, Docker (if used)</li>
+            </ul>
+        </section>
+        <a href="../index.html" class="back-button">Back to Portfolio</a>
+    </main>
+    <script src="../js/main.js"></script>
+</body>
+</html> 

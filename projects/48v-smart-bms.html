@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>48V Smart BMS - Project Details</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <style>
+        .project-header {
+            padding: 90px 10px 18px;
+            background: linear-gradient(135deg, #232323 0%, #363636 100%);
+            color: white;
+            text-align: center;
+            border-bottom: 1.5px solid #e8e8e8;
+        }
+        .project-header h1 {
+            font-size: 2em;
+            margin-bottom: 6px;
+            color: #E31E24;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .project-header p {
+            font-size: 1.1em;
+            color: #f3f3f3;
+            font-weight: 400;
+        }
+
+        /* Enhanced Project Hero Section Styles */
+        .project-hero {
+            display: flex;
+            align-items: stretch;
+            justify-content: center;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 36px auto 0 auto;
+            padding: 36px 18px 0 18px;
+            background: linear-gradient(120deg, #f7f7fa 60%, #f2f2f2 100%);
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+            position: relative;
+        }
+        .project-hero::before {
+            content: '';
+            position: absolute;
+            left: 0; top: 0; right: 0; bottom: 0;
+            border-radius: 18px;
+            background: linear-gradient(120deg, rgba(227,30,36,0.04) 0%, rgba(255,255,255,0.08) 100%);
+            z-index: 0;
+        }
+        .hero-image-col {
+            flex: 1 1 520px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 320px;
+            max-width: 600px;
+            z-index: 1;
+        }
+        .project-hero-img {
+            max-width: 95%;
+            width: 480px;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: 0 6px 32px rgba(227,30,36,0.13), 0 2px 12px rgba(0,0,0,0.08);
+            background: #fff;
+            border: 2.5px solid #eee;
+            transition: box-shadow 0.3s;
+        }
+        .project-hero-img:hover {
+            box-shadow: 0 10px 40px rgba(227,30,36,0.18), 0 4px 18px rgba(0,0,0,0.10);
+        }
+        .hero-overview-col {
+            flex: 1 1 520px;
+            padding: 0 10px;
+            min-width: 280px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            z-index: 1;
+        }
+        .hero-overview-col h2 {
+            color: #E31E24;
+            font-size: 1.5em;
+            margin-bottom: 12px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        .hero-overview-col p {
+            font-size: 1.08em;
+            color: #232323;
+            line-height: 1.7;
+            background: rgba(255,255,255,0.85);
+            padding: 16px 18px;
+            border-radius: 10px;
+            box-shadow: 0 1.5px 6px rgba(0,0,0,0.02);
+            font-weight: 400;
+        }
+
+        @media (max-width: 900px) {
+            .project-hero {
+                flex-direction: column;
+                gap: 18px;
+                padding: 18px 2vw 0 2vw;
+            }
+            .hero-image-col, .hero-overview-col {
+                width: 100%;
+                padding: 0;
+                min-width: 0;
+            }
+            .project-hero-img {
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+
+        .project-section {
+            margin-bottom: 24px;
+        }
+        .project-section:last-of-type {
+            margin-bottom: 0;
+        }
+        .project-section h2 {
+            color: #E31E24;
+            font-size: 1.25em;
+            margin-bottom: 12px;
+            font-weight: 600;
+            text-align: left;
+            padding-left: 0;
+        }
+        .project-section ul {
+            margin-left: 18px;
+        }
+        .project-section li {
+            margin-bottom: 8px;
+            font-size: 1em;
+        }
+        .back-button {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <a href="../index.html" class="logo-link">
+                <svg class="logo-svg" width="48" height="48" viewBox="0 0 120 120">
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#E31E24"/>
+                            <stop offset="50%" style="stop-color:#ff4d4d"/>
+                            <stop offset="100%" style="stop-color:#E31E24"/>
+                        </linearGradient>
+                        <filter id="glow">
+                            <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                            <feMerge>
+                                <feMergeNode in="coloredBlur"/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                        <clipPath id="hexClip">
+                            <path d="M60 15L105 40V90L60 115L15 90V40L60 15Z"/>
+                        </clipPath>
+                    </defs>
+                    <g clip-path="url(#hexClip)">
+                        <path class="logo-hex" d="M60 15L105 40V90L60 115L15 90V40L60 15Z" fill="url(#logoGradient)" filter="url(#glow)"/>
+                        <path class="logo-hex-outline" d="M60 15L105 40V90L60 115L15 90V40L60 15Z" fill="none" stroke="#fff" stroke-width="2" opacity="0.3"/>
+                        <text x="60" y="75" text-anchor="middle" class="logo-text" fill="#fff" filter="url(#glow)" font-family="Inter, sans-serif" font-weight="700" font-size="36">SB</text>
+                    </g>
+                </svg>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Project Header -->
+    <header class="project-header">
+        <h1>48V Smart BMS</h1>
+        <p>Advanced Battery Management System for high-voltage applications</p>
+    </header>
+
+    <!-- Project Hero Section: Image + Overview -->
+    <section class="project-hero">
+        <div class="hero-image-col">
+            <img src="../images/48V/48V_head.png" alt="48V Smart BMS Block Diagram" class="project-hero-img">
+        </div>
+        <div class="hero-overview-col">
+            <h2>Project Overview</h2>
+            <p>I designed and developed a comprehensive 48V Battery Management System (BMS) for Lithium-ion battery packs (14-cell series configuration). The system features robust, real-time telemetry capabilities leveraging 5G, Wi-Fi, and Bluetooth connectivity for remote monitoring, diagnostics, and data logging. This project was executed using Altium Designer for schematic capture and (presumably) PCB layout. The design prioritizes reliability, precision, and advanced communication for demanding applications such as electric vehicles, energy storage systems, or industrial equipment.</p>
+        </div>
+    </section>
+
+    <main class="project-content">
+        <div class="pdf-button-container" style="text-align: center; margin: 20px 0;">
+            <a href="../pdf/48v-bms-designs.pdf" class="pdf-button" style="display: inline-block; padding: 12px 24px; background-color: #E31E24; color: white; text-decoration: none; border-radius: 6px; font-weight: 500; transition: background-color 0.3s ease;">
+                <i class="fas fa-file-pdf" style="margin-right: 8px;"></i>View Design PDF
+            </a>
+        </div>
+
+        <section class="project-section">
+            <h2>Key Features & Responsibilities</h2>
+            <ul>
+                <li><strong>Full Hardware Design Lifecycle:</strong> Led the complete hardware design process from conceptualization, requirements gathering, and component selection through to detailed schematic capture and documentation using Altium Designer.</li>
+                <li><strong>Core BMS Functionality:</strong> Engineered the cell monitoring and balancing subsystem around the NXP MC33771CTPIAE 14-channel Battery Cell Controller, enabling precise voltage and temperature sensing (via NTCs) for each cell, along with passive cell balancing.</li>
+                <li><strong>Microcontroller & Processing:</strong> Integrated the NXP S32K344 automotive-grade microcontroller as the central processing unit, managing BMS logic, communication protocols, and telemetry data.</li>
+                <li><strong>Advanced Telemetry & Connectivity:</strong> Designed and implemented a multi-faceted telemetry subsystem featuring:
+                    <ul>
+                        <li><strong>5G Connectivity:</strong> Integrated an A55xQ5G module for high-speed, wide-area network communication.</li>
+                        <li><strong>Wi-Fi & Bluetooth:</strong> Incorporated an AW690 Wi-Fi module (Mini PCIe) and an HC-08 Bluetooth module for local wireless communication and configuration.</li>
+                        <li><strong>Data Storage:</strong> Included eMMC and QSPI Flash for firmware, configuration, and data logging.</li>
+                    </ul>
+                </li>
+                <li><strong>Power Supply Design:</strong> Architected a robust multi-rail power supply system using various buck converters (e.g., TPS54560, TPS62130A) and an NXP FS26 System Basis Chip (SBC) to efficiently power all onboard components from the battery input.</li>
+                <li><strong>Communication Interfaces:</strong> Implemented multiple communication interfaces:
+                    <ul>
+                        <li><strong>CAN FD:</strong> Utilized TJA1448 transceivers for high-speed automotive communication.</li>
+                        <li><strong>LIN:</strong> Integrated TJA1124 transceivers for local interconnect network.</li>
+                        <li><strong>UART & USB:</strong> Provided interfaces for debugging, direct communication, and data transfer.</li>
+                    </ul>
+                </li>
+                <li><strong>Control & Protection:</strong> Designed High-Side and Low-Side driver circuits for controlling external contactors, pre-charge circuits, and other switching elements critical for battery pack safety and operation.</li>
+                <li><strong>Signal Integrity & PCB Considerations:</strong> Ensured robust signal integrity for high-speed interfaces (like PCIe for Wi-Fi, QSPI) and implemented best practices for EMI/EMC mitigation during the design phase. (If you did PCB layout, expand on this here).</li>
+            </ul>
+        </section>
+
+        <section class="project-section">
+            <h2>Technologies & Tools Used</h2>
+            <ul>
+                <li><strong>Primary Microcontroller:</strong> NXP S32K344</li>
+                <li><strong>Battery Cell Controller:</strong> NXP MC33771CTPIAE</li>
+                <li><strong>Telemetry Modules:</strong> A55xQ5G (5G), AW690 (Wi-Fi), HC-08 (Bluetooth)</li>
+                <li><strong>Power ICs:</strong> NXP FS26 (SBC), Texas Instruments TPS54560, TPS62130A (Buck Converters)</li>
+                <li><strong>Communication Transceivers:</strong> TJA1448 (CAN FD), TJA1124 (LIN)</li>
+                <li><strong>Memory:</strong> QSPI Flash, eMMC</li>
+                <li><strong>Design Software:</strong> Altium Designer</li>
+                <li><strong>Key Protocols:</strong> CAN FD, LIN, UART, SPI, I2C, USB, PCIe</li>
+                <li><strong>Battery Configuration:</strong> 48V nominal, 14-cell Lithium-ion</li>
+            </ul>
+        </section>
+
+        <a href="../index.html" class="back-button">Back to Portfolio</a>
+    </main>
+
+    <script src="../js/main.js"></script>
+</body>
+</html> 
